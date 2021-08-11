@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,44 @@
     <title>Document</title>
     <link rel="manifest" href="manifest.json">
     <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+        }
+
         body {
             background-color: #262626;
         }
+
         .center {
             display: flex;
             justify-content: center;
             margin-top: 100px;
         }
+
         .timer {
             font-size: 60px;
-            font-family: 'Roboto', sans-serif;
-            color: white;
+
+        }
+
+        .menu {
+            font-size: 60px;
+            margin-left: 15px;
+        }
+
+        button {
+            background-color: yellow;
+            color: #262626;
+            font-size: 32px;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 16px;
+
         }
     </style>
     <script>
@@ -31,30 +58,31 @@
                 let fiveMinutes = 1000 * 60 * 5;
                 let endTime = startTime + fiveMinutes;
 
-            setInterval(function() {
-                let timeLeft = endTime - new Date().getTime();
-                if (timeLeft > 0) {
-                    let minutes = timeLeft / (1000 * 60);
-                    minutes = Math.floor(minutes);
-                    let seconds = timeLeft / 1000 % 60;
-                    seconds = Math.round(seconds);
-                    seconds = ('0' + seconds).slice(-2);
-                    let text = '0' + minutes + ' : ' + seconds;
-                    timer.innerHTML = text;
-                } else {
-                    alarm.play();
-                    let text = '00 : 00';
-                    timer.innerHTML = text;
-                }
-            }, 1000)
-            timerStarted = true;
+                setInterval(function () {
+                    let timeLeft = endTime - new Date().getTime();
+                    if (timeLeft > 0) {
+                        let minutes = timeLeft / (1000 * 60);
+                        minutes = Math.floor(minutes);
+                        let seconds = timeLeft / 1000 % 60;
+                        seconds = Math.round(seconds);
+                        seconds = ('0' + seconds).slice(-2);
+                        let text = '0' + minutes + ' : ' + seconds;
+                        timer.innerHTML = text;
+                    } else {
+                        alarm.play();
+                        let text = '00 : 00';
+                        timer.innerHTML = text;
+                    }
+                }, 1000)
+                timerStarted = true;
             }
         }
     </script>
 </head>
+
 <body>
     <div>
-        <img src="img/menu.png" alt="menu">
+        <span class="menu" onclick="alert('Leider gibt es noch kein Menü')">≡</span>
     </div>
     <div class="center">
         <img src="img/egg.png" alt="egg">
@@ -63,7 +91,8 @@
         05 : 00
     </div>
     <div class="center">
-        <img src="img/start.png" alt="start" onclick="startTimer()">
+        <button onclick="startTimer()">START</button>
     </div>
 </body>
+
 </html>
