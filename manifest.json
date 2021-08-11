@@ -1,12 +1,14 @@
 {
   "name": "Eieruhr",
   "short_name": "Eieruhr",
+  "description": "Eine Eieruhr",
   "theme_color": "#262626",
   "background_color": "#262626",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
+  "lang": "de-DE",
   "icons": [
     {
       "src": "img/icons/icon-72x72.png",
