@@ -18,21 +18,23 @@
 </head>
 
 <body>
-    <div>
+    <nav>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#"><i class="fas fa-egg"></i> Eieruhr</a>
             <a href="./settings/"><i class="fas fa-sliders-h"></i> Einstellungen</a>
-          </div>
+        </div>
         <span class="menu" onclick="openNav()">&#9776;</span>
-    </div>
-    <div class="center">
-        <img src="img/egg.png" alt="egg">
-    </div>
-    <div class="center timer" id="timer">05 : 00</div>
-    <div class="center">
-        <div id="button" onclick="startTimer()">Start</div>
-    </div>
+    </nav>
+    <main>
+        <div class="center">
+            <img src="img/egg.png" alt="egg">
+        </div>
+        <div class="center timer" id="timer">05 : 00</div>
+        <div class="center">
+            <div id="button" onclick="startTimer()">Start</div>
+        </div>
+    </main>
 </body>
 
 </html>
