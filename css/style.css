@@ -2,6 +2,7 @@ body {
     background-color: #262626;
     font-family: 'Roboto', sans-serif;
     color: white;
+    scroll-behavior: smooth;
 }
 
 .center {
