@@ -5,79 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Eieruhr</title>
     <link rel="manifest" href="manifest.json">
-    <style>
-        * {
-            font-family: 'Roboto', sans-serif;
-            color: white;
-        }
-
-        body {
-            background-color: #262626;
-        }
-
-        .center {
-            display: flex;
-            justify-content: center;
-            margin-top: 100px;
-        }
-
-        .timer {
-            font-size: 60px;
-
-        }
-
-        .menu {
-            font-size: 60px;
-            margin-left: 15px;
-        }
-
-        button {
-            background-color: yellow;
-            color: #262626;
-            font-size: 32px;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 16px;
-
-        }
-    </style>
-    <script>
-        let alarm = new Audio('sound/alarm.mp3');
-        let timerStarted = false;
-
-        function startTimer() {
-            if (!timerStarted) {
-                let startTime = new Date().getTime();
-                let fiveMinutes = 1000 * 60 * 5;
-                let endTime = startTime + fiveMinutes;
-
-                setInterval(function () {
-                    let timeLeft = endTime - new Date().getTime();
-                    if (timeLeft > 0) {
-                        let minutes = timeLeft / (1000 * 60);
-                        minutes = Math.floor(minutes);
-                        let seconds = timeLeft / 1000 % 60;
-                        seconds = Math.round(seconds);
-                        seconds = ('0' + seconds).slice(-2);
-                        let text = '0' + minutes + ' : ' + seconds;
-                        timer.innerHTML = text;
-                    } else {
-                        alarm.play();
-                        let text = '00 : 00';
-                        timer.innerHTML = text;
-                    }
-                }, 1000)
-                timerStarted = true;
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -87,9 +18,7 @@
     <div class="center">
         <img src="img/egg.png" alt="egg">
     </div>
-    <div class="center timer" id="timer">
-        05 : 00
-    </div>
+    <div class="center timer" id="timer">05 : 00</div>
     <div class="center">
         <button onclick="startTimer()">START</button>
     </div>

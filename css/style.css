@@ -1,0 +1,39 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #262626;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.timer {
+    font-size: 60px;
+
+}
+
+.menu {
+    font-size: 60px;
+    margin-left: 15px;
+}
+
+button {
+    background-color: yellow;
+    color: #262626;
+    font-size: 32px;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+
+}
