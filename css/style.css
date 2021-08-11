@@ -1,10 +1,7 @@
-* {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-}
-
 body {
     background-color: #262626;
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
 .center {
@@ -13,14 +10,15 @@ body {
     margin-top: 100px;
 }
 
-.timer {
-    font-size: 60px;
-
-}
-
 .menu {
     font-size: 60px;
     margin-left: 15px;
+    cursor: no-drop;
+}
+
+.timer {
+    font-size: 60px;
+
 }
 
 #button {
@@ -35,5 +33,4 @@ body {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 16px;
-
 }
