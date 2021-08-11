@@ -23,7 +23,7 @@ body {
     margin-left: 15px;
 }
 
-button {
+#button {
     background-color: yellow;
     color: #262626;
     font-size: 32px;
