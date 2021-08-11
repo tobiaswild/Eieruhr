@@ -3,7 +3,7 @@
   "short_name": "Eieruhr",
   "theme_color": "#262626",
   "background_color": "Eieruhr",
-  "display": "minimal-ui",
+  "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
